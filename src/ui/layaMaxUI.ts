@@ -3,19 +3,13 @@ import View=Laya.View;
 import Dialog=Laya.Dialog;
 import Scene=Laya.Scene;
 var REG: Function = Laya.ClassUtils.regClass;
-export module ui {
-    export class fooUI extends Scene {
-		public testLabel:Laya.Label;
-		public long_btn:Laya.Button;
-		public short_btn:Laya.Button;
-		public mbox:Laya.Box;
-		public mytext:laya.display.Text;
-		public display_width:Laya.Label;
+export module ui.ogDemo {
+    export class RootUI extends Scene {
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.loadScene("foo");
+            this.loadScene("ogDemo/Root");
         }
     }
-    REG("ui.fooUI",fooUI);
+    REG("ui.ogDemo.RootUI",RootUI);
 }
